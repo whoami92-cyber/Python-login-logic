@@ -1,5 +1,6 @@
 import time
 import getpass
+import os
 
 attemps=0
 while True:
@@ -8,11 +9,22 @@ while True:
     if  user =='admin' and pw =='1234':
         time.sleep(1)
         print("Hello")
-        a= ['A', 'AB', 'CD', 'EF']
-        print (a)
-        time.sleep(1)
-        print("bye")
-        break
+        while True:
+            key=input("Give list: ")
+            a= ['A', 'AB', 'CD', 'EF']
+            b= ['1','2','3', '4', '5']
+            c=['PYTHON']
+            if key==  'a':
+                print (a)
+            elif key == 'b':
+                print (b)
+            elif key =='c':
+                print (c)
+            if key =='exit':
+                time.sleep(1)
+                print ("bye")
+                os.system('clear')
+                break
     else:
        print("Error")
        attemps  +=1
