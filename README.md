@@ -1,10 +1,6 @@
 # Simple Python Login Logic
 
-This is a **practice project** created as part of my self-learning journey in Python.
-
-### Features:
-- **Secure Input:** Uses `getpass` to hide passwords while typing.
-- **Brute-force Protection:** Includes an attempt counter and `time.sleep` delays to prevent automated attacks.
-- **User Authentication:** Validates both username and password.
+This is a **practice project** created as part of my self-learning journey in python
+i us `time.sleep` and **attemps** for blocking `brute-force` attack
 
 *Developed using Termux on Android.*
