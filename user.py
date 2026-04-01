@@ -25,6 +25,8 @@ while True:
                 print ("bye")
                 os.system('clear')
                 break
+    elif user == 'exit':
+       break
     else:
        print("Error")
        attemps  +=1
