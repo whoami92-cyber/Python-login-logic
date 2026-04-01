@@ -5,5 +5,7 @@ i us `time.sleep` and **attempts** for blocking `brute-force` attack
 ## Update 
 now you can serch list and while loop in while loop 
 `list` a,b,c
+## Update
+updating 'exit' commant in first while loop 
 
 *Developed using Termux on Android.*
