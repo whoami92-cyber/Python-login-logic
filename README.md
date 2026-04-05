@@ -8,3 +8,5 @@ now you can serch list and while loop in while loop
 `list` a,b,c
 ## Update
 updating `exit` command in first while 
+# Update
+modified for flask 
