@@ -1,38 +1,30 @@
-import time
-import getpass
-import os
+from flask import Flask, request, flash, render_template
 
 attemps=0
-while True:
-    user=input("User: ")
-    pw=getpass.getpass("Password: ")
-    if  user =='admin' and pw =='1234':
-        time.sleep(1)
-        print("Hello")
-        while True:
-            key=input("Give list: ")
-            a= ['A', 'AB', 'CD', 'EF']
-            b= ['1','2','3', '4', '5']
-            c=['PYTHON']
-            if key==  'a':
-                print (a)
-            elif key == 'b':
-                print (b)
-            elif key =='c':
-                print (c)
-            if key =='exit':
-                time.sleep(1)
-                print ("bye")
-                os.system('clear')
-                break
-    elif user == 'exit':
-       break
+app=Flask( __name__ )
+app.secret_key ='787643'
+@app.route('/', methods=["GET", "POST"])
+def home():
+    a= ['A', 'AB', 'CD', 'EF']
+    b= ['1','2','3', '4', '5']
+    c=['PYTHON']
+    if request.method=="POST":
+        user=request.form.get("username")
+        pw=request.form.get("password")
+        key=request.form.get("list_key")
+        flash("Hello")
+    if key==  'a':
+        flash (a)
+    elif key == 'b':
+        flash (b)
+    elif key =='c':
+        flash (c)
     else:
-       print("Error")
-       attemps  +=1
-       time.sleep(1)
-       print ("attemps", attemps)
-       time.sleep(2)
+        flash("Error")
+        attemps +=1
+        flash ("attemps", attemps)
     if attemps == 3:
-       print("wrong user or password")
-       break
+        flash("wrong user or password")
+    return render_template("index.html")
+if __name__ == "__main__":
+    app.run(debug=True)
