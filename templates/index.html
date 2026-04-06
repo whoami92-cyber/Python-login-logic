@@ -1,0 +1,26 @@
+<!DOOCTYPE html>
+  <html lang="eng">
+    <head>
+      <title>Login</title>
+    </head>
+    <body>
+      <h1> Try look list</h1>
+      {% with messages =get_flashed_messages() %}
+      {% if messages %}
+     <ul>
+       {% for message in messages %}
+       <li>
+         {{message}}
+       </li>
+       {% endfor %}
+     </ul>
+     {% endif %}
+     {% endwith %}
+     <form method="POST">
+       user: <input type="text" name="user"><br><br>
+       password: <input type="password" name="password"><br><br>
+       list key (a, b, c):<input type="text" name="list_key" ><br><br>
+       <button type="submit">Find list</button>
+     </form>
+    </body>
+  </html>
