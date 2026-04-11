@@ -1,7 +1,6 @@
 from flask import Flask, request, flash, render_template
 
-app=Flask( __name__ )
-app.secret_key ='787643'
+app=Flask (__name__)
 @app.route('/', methods=["GET", "POST"])
 def home():
     a= ['A', 'AB', 'CD', 'EF']
